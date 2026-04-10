@@ -20,7 +20,7 @@
     `streamlit run model_deployment.py`<br>
     This command will run streamlit localhost engine and you will be navigated to Simple UI in default browser.
 
-> ![!Note]
+> ! [!Note]
 > Before executing the Jupyter Notebook and streamlit command, please make sure that your terminal is pointing to current working directory.
 
 ## Dataset Information
