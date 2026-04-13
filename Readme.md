@@ -1,4 +1,4 @@
-## Implemented a Movie Recommnender System which will recommend top 10 movies similar to the movie user has selected. The focus was to understand the Data Science Lifecycle (from data collection to model deployment). Furthermore, using streamlit package created a simple UI which describe how the ML algorithm are integrated with Web application to perform prediction.
+## Implemented a Movie Recommender System, which will recommend the top 10 movies similar to the movie the user has selected. The focus was to understand the Data Science Lifecycle (from data collection to model deployment). Furthermore, using streamlit package created a simple UI which describe how the ML algorithms are integrated with a web application to perform prediction.
 
 **<p align="center">Movie Recommender UI</p>**
 
