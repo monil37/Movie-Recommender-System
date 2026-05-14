@@ -1,31 +1,53 @@
-## Implemented a Movie Recommnender System which will recommend top 10 movies similar to the movie user has selected. The focus was to understand the Data Science Lifecycle (from data collection to model deployment). Furthermore, using streamlit package created a simple UI which describe how the ML algorithm are integrated with Web application to perform prediction.
+ # 🎬 Content-Based Movie Recommendation System
 
-**<p align="center">Movie Recommender UI</p>**
+## Project Overview
+This project is an end-to-end Machine Learning web application that recommends the top 10 movies similar to a user's selection. The primary focus of this project was to implement a complete **Data Science Lifecycle**—from data collection and preprocessing to model building and web deployment.
+
+Using **Content-Based Filtering**, the recommendation engine analyzes movie metadata to find contextual similarities. The final model is integrated into a clean, interactive user interface built with Streamlit.
+
+### 🛠️ Tech Stack & Tools
+* **Language:** Python
+* **Data Manipulation & Analysis:** Pandas, NumPy
+* **Machine Learning & NLP:** Scikit-Learn (`TfidfVectorizer`, `sigmoid_kernel`)
+* **Model Serialization:** Joblib
+* **Web Framework:** Streamlit
+
+## ⚙️ How It Works (The ML Process)
+1. **Data Collection & Cleaning:** Merged and cleaned the `movies.csv` and `credits.csv` datasets, handling missing values and extracting relevant features (genres, keywords, cast, crew, and overviews).
+2. **Text Vectorization (NLP):** Utilized `TfidfVectorizer` (Term Frequency-Inverse Document Frequency) to convert raw movie overviews and metadata into a matrix of TF-IDF features.
+3. **Similarity Computation:** Applied a **Sigmoid Kernel** to compute pairwise similarity scores between movies based on their feature vectors.
+4. **Model Deployment:** Exported the vectorized data and similarity models into `.pkl` files and built a Streamlit application (`model_deployment.py`) to serve real-time predictions.
+
+---
+
+### 🖥️ Movie Recommender UI
 
 ![Movie Recommender System](Simple-Movie-Recommender-LocalhostUI.png)
 
 
 <br>
 
-**Steps**
+## 🚀 Quick Start / Installation
 
 1. Clone this github repository
 2. Install the required packages using pip <br>
 `pip install -r requirements.txt`
-3. The dataframes and models is already saved in directory *dumped_obj*. The code for this is in Jupyter notebook named *Movie_Recommendation_System.ipynb*.
+3. The required dataframes and pre-trained models are already saved in the `dumped_obj` directory. The full exploratory and training code can be found in the Jupyter notebook `Movie_Recommendation_System.ipynb`.
 
-    - Option 1 : You can re-execute the notebook file and it will save the dataframes and models again in the dumped_obj directory
+    - **Option 1 (Train from scratch):** Re-execute the Jupyter notebook file. It will process the datasets and save the dataframes and models again in the `dumped_obj` directory.
 
-    - Option 2 : Continue with saved model and run the python script written in *model_deployment.py* file from terminal: <br>
+    - **Option 2 (Run Web App directly):** Continue with the saved models and run the python script written in `model_deployment.py` from your terminal: <br>
     `streamlit run model_deployment.py`<br>
     This command will run streamlit localhost engine and you will be navigated to Simple UI in default browser.
 
 > [!Note]
 > Before executing the Jupyter Notebook and streamlit command, please make sure that your terminal is pointing to current working directory.
 
+---
+
 ## Dataset Information
 
-The project utilizes two primary datasets containing comprehensive movie information.
+The project utilizes two primary datasets (from TMDB 5000 Movies Dataset) containing comprehensive movie metadata.
 
 ---
 
@@ -67,9 +89,7 @@ This dataset contains metadata and performance metrics for the movies.
 | **vote_average** | Average ratings the movie received. |
 | **vote_count** | The count of votes received. |
 
-
-
-
-Thank you and have a nice day :smile:
+---
+*Thank you and happy learning!* :smile:
 
 
